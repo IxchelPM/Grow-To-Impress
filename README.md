@@ -1,130 +1,96 @@
-GROW TO IMPRESS
-Inspiration
-As first-generation college students, we know firsthand the challenges of navigating the tech world without family guidance. Our experiences have driven us to create a platform that empowers young girls—especially those from underrepresented backgrounds—to grow with confidence and reach their full potential.
+# Grow to Impress
 
-Growing up in the U.S. as the daughter of Mexican immigrants (Ixchel Peralta-Martinez) and as a Colombian who moved to the U.S. (Maria Duran), we witnessed limited career paths for women in our families—often domestic work or labor. While we are proud of our roots, we’re committed to expanding what's possible for girls like us.
+A web platform designed to empower young girls (ages 14–19) with personal development tools, AI support, and mentorship guidance — especially in male-dominated fields like tech.
 
-GROW TO IMPRESS is inspired by the game Dress to Impress—but with a twist. Instead of outfits, we focus on confidence, growth, and life-changing skills. Our name reflects a mission: to help young women grow into the best versions of themselves.
+## Features
 
-This project is aligned with the United Nations Sustainable Development Goal 5: Achieve gender equality and empower all women and girls. We focus on:
+* AI-powered personal growth assistant (IXIA)
+* 21-day habit-building goal guides
+* TED Talk summarization tool
+* Mentorship and scholarship resources
+* Leadership networking guide
+* Real-world stories from women in tech
+* Clean, accessible UI and progress tracking
 
-Leadership Readiness: Equipping girls with the tools to become future leaders.
+## Sections Overview
 
-Tech Enablement: Leveraging AI to provide personalized guidance and support.
+### Learn How To
 
-Gender Equality: Creating space for girls to confidently pursue careers in male-dominated fields like tech and data science.
+Six interactive 21-day guides to help users:
 
-What It Does
-GROW TO IMPRESS is a web app divided into four empowering sections:
+* **Build a Club** – Learn how to form a community at school or college  
+* **Earn Certifications** – Find free online courses and programs  
+* **Build Confidence** – Daily prompts and mindset exercises  
+* **Recognize Healthy Relationships** – Understand support vs. toxicity  
+* **Save Your First $1,000** – Learn financial literacy basics  
+* **Improve Communication** – Practice assertive and effective speaking  
 
-1. Learn How To
-A step-by-step roadmap of six essential 21-day challenges—based on the science of habit formation. Girls can build vital life skills through guided, trackable programs:
+Includes a built-in daily progress tracker.
 
-Build Your Club – Learn how to launch a supportive school or college community.
+### IXIA - Your AI Accountability Partner
 
-Get Certifications & Courses – Discover free/affordable learning to boost your resume.
+* Available 24/7 for personalized guidance
+* Offers encouragement, goal tracking, and resources
+* Provides a safe space to dream and grow
+* Built using **Google AI API**, integrated into the web app
 
-Build Confidence – Practical exercises for inner strength and self-belief.
+**Name origin:** A flower + a blend of **Ixchel** and **Maria** + **IA** (*Inteligencia Artificial*, Spanish for AI)
 
-Recognize Healthy Relationships – Develop emotional intelligence and set boundaries.
+### Guides
 
-Save Your First $1,000 – Learn smart budgeting and financial literacy.
+Resources to support personal and professional growth:
 
-Improve Communication Skills – Become a clear, assertive, and confident communicator.
+* **TED Talk Summarizer** – Submit a YouTube link and get key insights
+* **Mentorship Finder** – Curated links to help find mentors
+* **Women in Management** – Step-by-step LinkedIn networking guide
+* **Scholarship Planner** – Track and access education funding
 
-Each path includes a progress tracker to celebrate small wins along the way.
+### Stories of Inspiration
 
-2. IXIA – Your Personal AI Buddy
-Meet IXIA, your always-available AI coach designed specifically for girls aged 14–19.
+* Real stories and photos from women in tech
+* Encouraging messages and career advice
+* LinkedIn profiles for connection
+* Highlights diverse paths to success
 
-24/7 Support – Like a reliable best friend, IXIA is always there to answer questions and offer encouragement.
+## Tech Stack
 
-Personalized Guidance – Get tailored tips based on your goals and progress.
+* **Frontend:** React (via Project IDX)
+* **Backend:** Flask (Python)
+* **AI Integration:** Google AI API
+* **Design Tools:**
+  * Canva – Logo
+  * Imagen 3 – Visual assets
+* **Debugging & Testing:** Gemini Advance
 
-Safe Space to Grow – Share dreams, setbacks, and wins—IXIA is a judgment-free zone.
+## Development Workflow
 
-Why the name IXIA?
-It’s inspired by:
+### Model Development
 
-Ixia, a delicate flower
+* Prompt testing in Google Colab using Python and Jupyter Notebooks
+* Final model integrated into backend via Project IDX
 
-A blend of Ixchel and Maria
+### Frontend Integration
 
-“IA” = Inteligencia Artificial (Spanish for Artificial Intelligence)
+* Built with React
+* Connected to Flask API routes for AI and backend functionality
 
-IXIA supports girls throughout their learning journey—helping them stay on track, motivated, and inspired.
+### UI/UX Design
 
-3. Growth Guides
-A toolkit filled with real-world strategies and resources:
+* Pastel-themed visuals (flowers, leaves, elegant clipart)
+* Mobile-friendly and user-focused design
 
-TED Talk Summarizer – Upload a TED/leadership YouTube link to get a fast, insightful summary.
+## AI and Safety
 
-Mentorship – A curated list of mentorship programs and how to apply.
+* Default safety and temperature settings used
+* All prompts designed to be safe, supportive, and empowering
 
-Women in Management – Step-by-step LinkedIn outreach guide to connect with inspiring professionals.
+## Project Files
 
-Scholarships – Resources and planning tools to find and apply for scholarships.
+* `app.py` – Flask backend
+* `frontend/` – React components
+* `static/`, `assets/` – Images and logos
+* `templates/` – HTML templates
 
-These tools make it easier for girls to access education, build networks, and stay inspired.
+## Mission
 
-4. Stories of Inspiration
-Real women. Real journeys. Real impact.
-
-This section highlights the diverse stories of women in tech and leadership:
-
-Photo + Story Cards – Share personal narratives of struggle and success.
-
-Diverse Voices – Showcase women from varied backgrounds and life stages.
-
-Connectable Profiles – Link to their LinkedIn or other platforms for real-world networking.
-
-Why it matters:
-
-Girls see themselves in these stories.
-
-Barriers are broken down through visibility.
-
-A sense of belonging and community is built.
-
-This is more than a wall of stories—it’s a launching pad for the next generation of women leaders.
-
-How We Built It
-Tech Stack
-Frontend: React
-
-Backend: Flask
-
-Deployment: Project IDX
-
-AI Models: Developed in Google Colab using Python and Jupyter Notebooks, integrated via API into the web app
-
-Debugging & Testing
-Gemini Advance – Used to debug code, refine prompts, and ensure a smooth UX
-
-Design & Branding
-Logo: Created with Canva to reflect our identity
-
-Visuals: Generated using Imagen 3 (prompted with delicate, pastel, nature-inspired themes)
-
-AI Documentation & Planning
-Google AI Developer Docs: Guided our API usage, JSON formatting, and prompt engineering
-
-Google AI Studio: Helped refine outputs with example prompts and “Get Code” tools
-
-Ideation & UX Strategy
-Our initial brainstorm defined:
-
-What content should go where
-
-Where AI was most impactful
-
-How to design for clarity, motivation, and usability
-
-The design evolved continuously, focusing on user experience, accessibility, and inspiration.
-
-Chatbot Safety
-We used default safety settings and parameters (e.g., temperature) for IXIA to ensure it stays safe, respectful, and aligned with community standards.
-
-GROW TO IMPRESS is more than a web app—it’s a mission, a movement, and a support system. By equipping young girls with skills, confidence, and mentorship, we’re not just closing the gender gap—we’re building a stronger, more inclusive future.
-
-Let’s grow. Let’s impress.
+Built by first-generation college students, **Grow to Impress** helps girls build confidence, gain skills, and find mentorship. Our mission supports **UN Sustainable Development Goal 5**: *Achieve gender equality and empower all women and girls*.
