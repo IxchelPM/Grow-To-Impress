@@ -1,0 +1,8 @@
+Flask
+flask-cors
+flask-bcrypt
+Werkzeug 
+Pillow 
+yt-dlp 
+google-generativeai
+python-dotenv

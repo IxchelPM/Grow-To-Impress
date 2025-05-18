@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Grow to Impress</title>
+</head>
+<body>
+    <!-- Splash Screen Container -->
+    <div class="splash-container" id="splash-screen">
+        <div class="splash-content content-box">
+            <h1>Welcome to Grow to Impress!</h1>
+            <p>Your journey toward growth and success starts here.</p>
+            <p class="splash-description">
+                Grow to Impress is designed to support young women on their journey to becoming leaders and innovators. We’re here to guide, inspire, and empower you.
+            </p>
+        </div>
+    </div>
+    
+
+    <!-- React Root Container (initially hidden) -->
+    <div id="root" style="display: none;"></div>
+
+    <script>
+        // Function to show or hide the splash screen based on sessionStorage
+        function showSplashScreen() {
+            // Check if splash screen has already been shown in the current session
+            if (sessionStorage.getItem('splashShown') === 'true') {
+                // Skip splash screen and show the React app
+                document.getElementById('splash-screen').style.display = 'none';
+                document.getElementById('root').style.display = 'block';
+            } else {
+                // Show splash screen for a few seconds, then fade it out
+                setTimeout(() => {
+                    document.getElementById('splash-screen').classList.add('fade-out'); // Add fade-out animation
+                    setTimeout(() => {
+                        document.getElementById('splash-screen').style.display = 'none'; // Hide splash screen after animation
+                        document.getElementById('root').style.display = 'block'; // Show React app container
+                        sessionStorage.setItem('splashShown', 'true'); // Mark splash as shown
+                    }, 1000); // Duration of fade-out animation
+                }, 3000); // 3-second delay before starting fade-out
+            }
+        }
+
+        // Run the function when the page loads
+        showSplashScreen();
+    </script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+/* How-To Section Container */
+.how-to-section {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.how-to-section .navbar {
+  width: 95vw;
+  max-width: 1000px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1vh 0;
+  border-bottom: 0.2vh solid #eed6d3;
+  box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  top: 0;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.how-to-section .navbar-links {
+  display: flex;
+  gap: clamp(0.5rem, 2vw, 1.5rem);
+  margin-top: 1vh;
+}
+
+.how-to-section .nav-link {
+  color: #3b5f47;
+  text-decoration: none;
+  padding: clamp(0.5rem, 1vh, 1.5rem) clamp(1rem, 2vw, 2.5rem);
+  border-radius: 1vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.how-to-section .nav-link.active,
+.how-to-section .nav-link:hover {
+  background-color: #eed6d3;
+  color: #5c7968;
+}
+
+/* Content Container */
+.how-to-content-container {
+  width: 95vw;
+  max-width: 1000px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 3vh 3vw;
+  min-height: 70vh;
+  box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.05);
+  border: 1px solid #eed6d3;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2vw;
+  box-sizing: border-box;
+}
+
+/* Topics List (Left Side - 20%) */
+.how-to-content-container .how-to-topics-list {
+  flex-basis: 20%;
+  max-width: 200px;
+  background-color: #f7f9fc;
+  padding: 2vh;
+  border-right: 1px solid #e6eaf0;
+  overflow-y: auto;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.how-to-content-container .how-to-topics-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.how-to-content-container .how-to-topics-list li {
+  padding: 0.8vh 1vw;
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+  border-radius: 0.5vh;
+  margin-bottom: 0.8vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.how-to-content-container .how-to-topics-list li.selected {
+  background-color: #5c7968;
+  color: #fff;
+  font-weight: bold;
+}
+
+.how-to-content-container .how-to-topics-list li:hover {
+  background-color: #e0e6ef;
+  color: #333;
+}
+
+/* Main Content (Right Side - 80%) */
+.how-to-content-container .how-main-content {
+  flex-basis: 80%;
+  max-width: 800px;
+  padding: 2vh 1vw;
+  box-sizing: border-box;
+}
+
+.how-to-content-container .how-main-content h2 {
+  font-size: 1.8vw;
+  color: #5c7968;
+  margin-bottom: 1vh;
+}
+
+/* Day Item Styling */
+.day-item {
+  background-color: #ffffff;
+  padding: 2vh 1.5vw;
+  border-radius: 1vh;
+  box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.05);
+  border: 1px solid #eed6d3;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 2vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Completed Day Item */
+.day-item.completed {
+  background-color: #e0f7e4;
+}
+
+.how-main-content, .day-item {
+  box-sizing: border-box;
+  padding: 2vh 2vw;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+  display: flex;
+  gap: 2vw;
+  margin-top: 2vh;
+  justify-content: space-between;
+}
+
+.navigation-buttons button {
+  padding: 0.5vh 1.5vw;
+  border: none;
+  border-radius: 1vh;
+  background-color: #5c7968;
+  color: white;
+  font-size: 1vw;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navigation-buttons button:hover {
+  background-color: #3b5f47;
+}
+
+.navigation-buttons button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Flower Row */
+.flower-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.flower-row svg {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Growth Progress */
+.growth-progress {
+  font-size: 1vw;
+  color: #5a5a5a;
+  margin-top: 2vh;
+  font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .how-to-content-container {
+    flex-direction: column;
+  }
+
+  .how-to-topics-list {
+    width: 100%;
+    max-width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e6eaf0;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 1.5vw;
+  }
+}

@@ -1,0 +1,241 @@
+/* Stories Page Container - General styling for the stories page layout */
+.stories-page {
+  font-family: Arial, sans-serif;
+  color: #3b5f47;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw; /* Full viewport width */
+  min-height: 100vh; /* Minimum height to cover the entire viewport */
+  box-sizing: border-box; /* Includes padding and border in element's total width and height */
+}
+
+/* Navbar Styling - Styles the navigation bar for the stories page */
+.stories-page .navbar {
+  width: 95vw; /* Sets width to 95% of the viewport width */
+  max-width: 1000px; /* Limits maximum width */
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  padding: clamp(1rem, 2vh, 2.5rem) clamp(1rem, 2vw, 2.5rem); /* Responsive padding */
+  border-bottom: 0.2vh solid #eed6d3; /* Bottom border for visual separation */
+  box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 10; /* Ensures the navbar stays on top */
+  box-sizing: border-box;
+}
+
+/* Navbar Title and Subtitle - Styling for the navbar headings */
+.stories-page .navbar-title {
+  font-size: clamp(1.5rem, 2.5vw, 3rem); /* Responsive font size */
+  color: #5c7968;
+}
+
+.stories-page .navbar-subtitle {
+  font-size: clamp(1rem, 1.2vw, 1.5rem);
+  color: #5a5a5a;
+  margin-top: 0.5vh;
+}
+
+/* Navbar Links - Styling for navigation links within the navbar */
+.stories-page .navbar-links {
+  display: flex;
+  gap: clamp(0.5rem, 2vw, 1.5rem); /* Responsive spacing between links */
+  margin-top: 1vh;
+}
+
+.stories-page .nav-link {
+  color: #3b5f47;
+  text-decoration: none;
+  padding: clamp(0.5rem, 1vh, 1.5rem) clamp(1rem, 2vw, 2.5rem); /* Responsive padding */
+  border-radius: 1vh; /* Rounds the corners */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transition */
+}
+
+.stories-page .nav-link.active,
+.stories-page .nav-link:hover {
+  background-color: #eed6d3; /* Changes background color on hover */
+  color: #5c7968;
+}
+
+/* Stories Content Container - Main container for stories submission form and gallery */
+.stories-page .stories-content-container {
+  display: flex;
+  justify-content: space-between; /* Spreads submission form and gallery */
+  width: 95vw;
+  max-width: 1000px;
+  box-sizing: border-box;
+}
+
+/* Submission Form Container - Container for the story submission form */
+.stories-page .submission-container {
+  flex: 1 1 30%; /* Takes 30% of available space */
+  max-width: 300px; /* Limits width to keep it compact */
+  background-color: #ffffff;
+  border: 1px solid #eed6d3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
+  padding: 10px; /* Compact padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Submission Form Headings and Text */
+.stories-page .submission-container h1,
+.stories-page .submission-container h2 {
+  color: #3b5f47;
+  font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
+}
+
+.stories-page .submission-container p {
+  color: #3b5f47;
+  font-size: clamp(0.8rem, 1vw, 1rem);
+}
+
+/* Form Styling - Styling for the inputs, textareas, and buttons in the submission form */
+.stories-page .submission-container form input,
+.stories-page .submission-container form textarea,
+.stories-page .submission-container form input[type="file"] {
+  width: 100%; /* Full width */
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #e0e6ef;
+  border-radius: 5px;
+  font-size: clamp(0.8rem, 1vw, 1rem);
+}
+
+.stories-page .submission-container form button {
+  width: 100%; /* Full width */
+  padding: 8px;
+  background-color: #5c7968; /* Button color */
+  color: #fff;
+  font-size: clamp(0.7rem, 1vw, 1.1rem);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background change */
+}
+
+.stories-page .submission-container form button:hover {
+  background-color: #4a5f58; /* Darker shade on hover */
+}
+
+/* Success and Error Messages */
+.stories-page .success-message,
+.stories-page .error-message {
+  color: #3b5f47;
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  margin-top: 10px;
+}
+
+/* Stories Gallery - Grid Layout for the stories gallery */
+.stories-page .stories-gallery {
+  flex: 1 1 70%; /* Takes 70% of available space */
+  max-width: 700px; /* Limits maximum width */
+  max-height: 700px; /* Limits maximum height */
+  background-color: #ffffff;
+  padding: 10px; /* Compact padding */
+  border: 1px solid #eed6d3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  overflow-y: auto; /* Enables scrolling if content overflows */
+}
+
+/* Story Card Styling - Styles individual story cards in the gallery */
+.stories-page .story-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e6ef;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease; /* Adds a smooth transform effect */
+  height: 250px; /* Compact height */
+}
+
+.stories-page .story-card:hover {
+  transform: translateY(-5px); /* Elevates card slightly on hover */
+}
+
+.stories-page .story-card img {
+  width: 60px; /* Small profile image */
+  height: 60px;
+  border-radius: 50%; /* Circular image */
+  border: 2px solid #5c7968;
+  margin-bottom: 8px;
+  object-fit: cover; /* Ensures image fits within container */
+}
+
+/* Story Card Title and Content */
+.stories-page .story-card h3 {
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
+  color: #3b5f47;
+  font-weight: bold;
+  margin: 8px 0 4px;
+}
+
+.stories-page .story-card p {
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  color: #3b5f47;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Truncates overflowing text */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limits text to 3 lines */
+  -webkit-box-orient: vertical;
+}
+
+/* Pagination Controls - Styling for page navigation buttons */
+.stories-page .pagination {
+  display: flex;
+  justify-content: center; /* Centers pagination controls */
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.stories-page .pagination button {
+  padding: 4px 8px;
+  font-size: clamp(0.8rem, 1vw, 0.9rem);
+  background-color: #5c7968;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  min-width: 50px;
+  height: 28px;
+}
+
+.stories-page .pagination button:hover {
+  background-color: #4a5f58;
+}
+
+.stories-page .pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed; /* Shows not-allowed cursor on disabled buttons */
+}
+
+/* Responsive Design - Adjusts layout for smaller screens */
+@media (max-width: 768px) {
+  .stories-page .stories-content-container {
+    flex-direction: column; /* Stacks submission and gallery vertically */
+  }
+
+  .stories-page .submission-container,
+  .stories-page .stories-gallery {
+    width: 100%;
+    max-width: 100%; /* Full width on smaller screens */
+  }
+
+  .stories-page .stories-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Smaller columns for narrower viewports */
+  }
+}
+

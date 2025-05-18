@@ -1,0 +1,164 @@
+/* Main Container Styling - Defines the main layout with two sections (left and right) */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 90%;
+    max-width: 1200px;
+    min-width: 500px;
+    height: 600px;
+    margin: 60px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid #eed6d3;
+}
+
+/* Left Section Styling - Welcome text with centered content */
+.welcome-section {
+    flex: 1;
+    padding: 0 30px 30px 30px;
+    color: #3b5f47;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.welcome-section h2 {
+    font-size: 2.4rem;
+    color: #5c7968;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.welcome-section p {
+    font-size: 1.1rem;
+    color: #5a5a5a;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    max-width: 500px;
+}
+
+/* Right Section Styling - Form area for login or signup */
+.sign-in-section, .right-section {
+    flex: 1;
+    padding: 0 30px 30px 30px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Form Styling - Input fields and buttons */
+.sign-in-section form, .right-section form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Label Styling - For form labels */
+.sign-in-section label, .right-section label {
+    font-size: 1.1rem;
+    color: #3b5f47;
+    margin: 12px 0 6px;
+}
+
+/* Input Styling - Input fields for email/password */
+.sign-in-section input, .right-section input {
+    padding: 12px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    border: 1px solid #d4a5a5;
+    background-color: #f7f3f1;
+    color: #3b5f47;
+    margin-bottom: 18px;
+    font-size: 1rem;
+    transition: box-shadow 0.3s;
+}
+
+.sign-in-section input:focus, .right-section input:focus {
+    border-color: #e8bcb5;
+    box-shadow: 0 0 10px rgba(232, 188, 181, 0.5);
+}
+
+/* Button Styling - For form submission buttons */
+button {
+    padding: 14px 28px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 30px;
+    background-color: #a4c3a6;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #8fa88f;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Error and Message Styling - To display error or success messages */
+.error, .message {
+    font-size: 1rem;
+    margin-top: 12px;
+    width: 100%;
+}
+
+.error {
+    color: #e57373;
+}
+
+.message {
+    color: #4caf50;
+}
+
+/* Link Styling - For links like 'forgot password' or 'signup' */
+.forgot-password, .signup-link, .login-link {
+    font-size: 1rem;
+    margin-top: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+.forgot-password a, .signup-link a, .login-link a {
+    color: #ba7972;
+    text-decoration: none;
+}
+
+.forgot-password a:hover, .signup-link a:hover, .login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design - Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 95%;
+        height: auto;
+        padding: 30px;
+    }
+
+    .welcome-section, .sign-in-section, .right-section {
+        max-width: 100%;
+        padding: 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .sign-in-section form, .right-section form {
+        align-items: center;
+    }
+}
