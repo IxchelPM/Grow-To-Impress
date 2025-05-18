@@ -1,12 +1,11 @@
 # Grow to Impress
 
-A web platform designed to empower young girls (ages 14–19) with personal development tools, AI support, and mentorship guidance — especially in male-dominated fields like tech.
+A web platform designed to empower young girls (ages 14–19) with personal development tools, AI support, and mentorship guidance, especially in male-dominated fields like tech.
+Built by first-generation college students, **Grow to Impress** helps girls build confidence, gain skills, and find mentorship. Our mission supports **UN Sustainable Development Goal 5**: *Achieve gender equality and empower all women and girls*.
 
 ## Features
 
-* AI-powered personal growth assistant (IXIA)
-* 21-day habit-building goal guides
-* TED Talk summarization tool
+* AI-powered personal growth assistant (IXIA), 21-day habit-building goal guides, and TED Talk summarization tool
 * Mentorship and scholarship resources
 * Leadership networking guide
 * Real-world stories from women in tech
@@ -34,8 +33,6 @@ Includes a built-in daily progress tracker.
 * Provides a safe space to dream and grow
 * Built using **Google AI API**, integrated into the web app
 
-**Name origin:** A flower + a blend of **Ixchel** and **Maria** + **IA** (*Inteligencia Artificial*, Spanish for AI)
-
 ### Guides
 
 Resources to support personal and professional growth:
@@ -52,45 +49,41 @@ Resources to support personal and professional growth:
 * LinkedIn profiles for connection
 * Highlights diverse paths to success
 
-## Tech Stack
-
-* **Frontend:** React (via Project IDX)
-* **Backend:** Flask (Python)
-* **AI Integration:** Google AI API
-* **Design Tools:**
-  * Canva – Logo
-  * Imagen 3 – Visual assets
-* **Debugging & Testing:** Gemini Advance
-
 ## Development Workflow
 
 ### Model Development
 
 * Prompt testing in Google Colab using Python and Jupyter Notebooks
-* Final model integrated into backend via Project IDX
+* Final model integrated into the backend
 
 ### Frontend Integration
-
 * Built with React
 * Connected to Flask API routes for AI and backend functionality
 
 ### UI/UX Design
-
 * Pastel-themed visuals (flowers, leaves, elegant clipart)
 * Mobile-friendly and user-focused design
 
 ## AI and Safety
-
 * Default safety and temperature settings used
-* All prompts designed to be safe, supportive, and empowering
+* All prompts are designed to be safe, supportive, and empowering
 
-## Project Files
+##  Tech Stack
 
-* `app.py` – Flask backend
-* `frontend/` – React components
-* `static/`, `assets/` – Images and logos
-* `templates/` – HTML templates
-
-## Mission
-
-Built by first-generation college students, **Grow to Impress** helps girls build confidence, gain skills, and find mentorship. Our mission supports **UN Sustainable Development Goal 5**: *Achieve gender equality and empower all women and girls*.
+*   **Backend:**
+    *   Python
+    *   Flask (Web Framework)
+    *   SQLite (Database)
+    *   Google Generative AI (Gemini API for AI features)
+    *   Flask-Bcrypt (Password Hashing)
+    *   Flask-CORS (Cross-Origin Resource Sharing)
+    *   `yt-dlp` (YouTube video downloading)
+    *   Pillow (Image processing)
+*   **Frontend:**
+    *   React.js
+    *   JavaScript 
+    *   HTML5 & CSS3
+    *   Axios (HTTP Client)
+    *   React Router (Client-side routing)
+*   **Development:**
+    *   Node.js & npm (Frontend package management & build)
